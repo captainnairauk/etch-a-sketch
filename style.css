@@ -3,26 +3,16 @@
     --grid-rows:1;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1{
-    text-align: center;
-}
-
 #grid-container{
     display: grid;
-    height: 50vh;
-    width:50vw;
+    justify-content: center;
     grid-template-rows: repeat(var(--grid-rows),1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);  
+    border: 1px solid black;
 }
 
 .grid-item{
     padding: 1em;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     text-align: center;
 }
