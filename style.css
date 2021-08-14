@@ -3,16 +3,20 @@
     --grid-rows:1;
 }
 
+h1{
+    display: flex;
+    justify-content: center;
+}
+
 #grid-container{
     display: grid;
-    justify-content: center;
     grid-template-rows: repeat(var(--grid-rows),1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);  
-    border: 1px solid black;
+    border: 1px solid blue;
 }
 
 .grid-item{
     padding: 1em;
-    border: 1px solid black;
+    border: 1px solid orange;
     text-align: center;
 }
