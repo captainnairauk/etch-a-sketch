@@ -17,14 +17,15 @@ function makeRows(rows, cols) {
         });
     };
 };
+makeRows(16,16)
 
-const button= document.getElementById("button");
+// const button= document.getElementById("button");
 
-button.addEventListener("click", function changeSize(size){
-    size=prompt("Enter a value");
-    window.location.reload(true);
-    makeRows(size,size);
-});
+// button.addEventListener("click", function changeSize(size){
+//     size=prompt("Enter a value");
+//     window.location.reload(true);
+//     makeRows(size,size);
+// });
 
 
 
