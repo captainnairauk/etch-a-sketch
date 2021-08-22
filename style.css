@@ -10,13 +10,15 @@ h1{
 
 #grid-container{
     display: grid;
+    width: 500px;
+    height: 500px;
     grid-template-rows: repeat(var(--grid-rows),1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);  
     border: 1px solid blue;
 }
 
 .grid-item{
-    padding: 1em;
-    border: 1px solid orange;
+    /* padding: 1em; */
+    border: 1px solid black;
     text-align: center;
 }

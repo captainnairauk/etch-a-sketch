@@ -9,23 +9,27 @@ function makeRows(rows, cols) {
     container.style.setProperty("--grid-cols", cols);
     for (c = 0; c < (rows * cols); c++) {
         let cell = document.createElement("div");
-        cell.innerText = (c + 1);
+        // cell.innerText = (c + 1);
         container.appendChild(cell).className = "grid-item";
-        cell.addEventListener("mouseover", function bgChange(){  
+        cell.addEventListener("mouseover", function bgChange() {
             const rndCol = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
             cell.style.backgroundColor = rndCol;
         });
     };
 };
-makeRows(16,16)
 
-// const button= document.getElementById("button");
+makeRows(16,16);
 
-// button.addEventListener("click", function changeSize(size){
-//     size=prompt("Enter a value");
-//     window.location.reload(true);
-//     makeRows(size,size);
-// });
+const button = document.getElementById("button");
 
-
+button.addEventListener("click", function changeSize(size) {
+    size = prompt("Enter a value");
+    container.innerHTML = "";
+    if (0 < size && size <= 100) {
+        makeRows(size, size);
+    } else {
+        makeRows(16, 16);
+        alert ("Only type values between 1 to 100");
+    }
+});
 
