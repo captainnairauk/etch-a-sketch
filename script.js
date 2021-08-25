@@ -23,7 +23,7 @@ makeRows(16,16);
 const button = document.getElementById("button");
 
 button.addEventListener("click", function changeSize(size) {
-    size = prompt("Enter a value");
+    size = prompt("Enter a value between 0 to 101");
     container.innerHTML = "";
     if (0 < size && size <= 100) {
         makeRows(size, size);
