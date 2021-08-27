@@ -1,7 +1,16 @@
 
+*{
+    box-sizing: border-box;
+}
+
 :root{
     --grid-cols:1;
     --grid-rows:1;
+    
+}
+
+body{
+    background: cyan;
 }
 
 #wrapper{
@@ -11,17 +20,25 @@
     justify-content: center;
 }
 
+#button{
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border-style:solid;
+    cursor: pointer;
+}
+
 .grid-container{
     display: grid;
-    width: 480px;
-    height: 480px;
+    width: 400px;
+    height: 400px;
     grid-template-rows: repeat(var(--grid-rows),1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);  
-    border: 1px solid blue;
+    background: white;
+    border: 1px solid black;
 }
 
 .grid-item{
-    /* padding: 1em; */
     border: 1px solid black;
     text-align: center;
 }
