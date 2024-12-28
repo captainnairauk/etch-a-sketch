@@ -22,7 +22,17 @@ function createGrid(size) {
 
 }
 
-
 createGrid(16);
+
+resizeButton.addEventListener('click', () => {
+    let newSize = prompt('Enter the number of squares per side (maximum 100):');
+    newSize = parseInt(newSize);
+
+    if(newSize && newSize>0 && newSize<=100){
+        createGrid(newSize);
+    }else{
+        alert('Please enter a valid number between 1 and 100');
+    }
+});
 
 
